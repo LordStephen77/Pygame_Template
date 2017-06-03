@@ -18,12 +18,20 @@ You should have received a copy of the GNU General Public License along
 with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-import pygame
+# Import standard modules.
+import sys
 import random
+import time
 
-WIDTH = 360
-HEIGHT = 480
+# Import non-standard modules.
+import pygame
+from pygame.locals import *
 
+# Screen resolution
+WIDTH = 800
+HEIGHT = 600
+
+# Frames per second
 FPS = 30
 
 # Define colors
@@ -33,18 +41,20 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-
-# Inizialize Pygame
+# Inizialize pygame
 pygame.init()
 
 # Create window
 pygame.mixer.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Pygame Template")
+pygame.display.set_caption("Pygame_Template")
+
+# Create an object to help track time
 clock = pygame.time.Clock()
 
 #Game loop
 running = True
+
 while running:
     # keep loop running at the right speed
     clock.tick(FPS)
@@ -54,7 +64,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # Update
-
+    # ...
 
     # Draw / Render
     screen.fill(BLACK)
